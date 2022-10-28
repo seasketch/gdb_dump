@@ -10,4 +10,19 @@ and can be opened for debugging in QGIS.
 
 ## Installation
 
+You will need to have a recent version of ogr/gdal installed first, then:
+
+```
 python3 -m pip install "gdb_dump @ git+https://github.com/seasketch/gdb_dump"
+```
+
+
+## Usage
+
+`gdb_dump` *input/path.gdb* *./output/dir*
+
+#### Example
+
+```
+gdb_dump src/fsm_seasketch.gdb dist/
+```
