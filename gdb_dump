@@ -12,8 +12,8 @@ def write_source(sink, source):
 
 def main(argv=sys.argv[1:]):
   if (len(argv) < 2):
-    print "Usage: gdb_dump [input_gdb_path] [output_directory]"
-  for layername in fiona.listlayers('src/fsm_seasketch.gdb'):
+    print("Usage: gdb_dump [input_gdb_path] [output_directory]")
+  for layername in fiona.listlayers(argv[0]):
     with fiona.open(argv[0], "r", layer=layername) as src:
       source_driver = src.driver
       source_schema = src.schema
